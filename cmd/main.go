@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/charmbracelet/bubbles/key"
 	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
+	"github.com/charmbracelet/log"
 )
 
 type errMsg error
@@ -67,9 +69,14 @@ func (m model) View() string {
 }
 
 func main() {
+	logger := log.NewWithOptions(os.Stderr, log.Options{
+		ReportCaller:    true,
+		ReportTimestamp: true,
+		TimeFormat:      time.Kitchen,
+	})
+
 	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		logger.Fatal(err)
 	}
 }

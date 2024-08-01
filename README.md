@@ -18,14 +18,18 @@ gofast
 
 ## Napkin plan
 
-- Init screen: choose stack/drivers (1 option for now)
-- Generate screen: choose what to generate (CRUD, API, Model, Frontend)
-- CRUD screen: choose entity name, fields, types, and validation
-- API screen: choose entity name, fields, types, and validation
-- Model screen: choose entity name, fields, types, and validation
-- Frontend screen: choose entity name, fields, types, and validation
--  Generate files
--  Run migrations
--  Run frontend
--  Run backend
--  Open browser
+- Models: Creates model with necessary configurations, relations, and validations.
+- Views: Scaffolds views using Shadcn-UI, enabling immediate CRUD operations.
+- Controllers: Generates API routes.
+
+### Commands 
+
+- `gofast new` - Create a new project (set up and config files ...)
+- `gofast model` - Create a new model (fields, relations, validations ...)
+- `gofast view` - Create a new view (CRUD operations)
+- `gofast controller` - Create a new controller (API routes)
+- `gofast scaffold` - Create a new scaffold (model, view, controller)
+
+**Stack:** Go, [shadcn-ui/ui](https://github.com/shadcn-ui/ui) and [htmx](https://github.com/bigskysoftware/htmx).
+
+**Drivers:** sqllite3

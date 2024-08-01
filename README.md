@@ -2,7 +2,7 @@
 
 [![build](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/build.yml)[![Dependabot Updates](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/dependabot/dependabot-updates)[![golangci-lint](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/lint.yml/badge.svg)](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/lint.yml)[![release](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/release.yml/badge.svg)](https://github.com/charmbracelet/bubbletea-app-template/actions/workflows/release.yml)
 
-A TUI app written in Go to scaffold fullstack applications. Generate CRUD operations and their respective API routes, database Model (migrations), and frontend components. Build an app in 10 minutes!
+A TUI app written in Go to scaffold fullstack applications. Generate CRUD operations and their respective API routes, database Model (migrations), and frontend components. Build an app in 10 minutes! - inspired by [kirimase](https://kirimase.dev).
 
 ## Installation
 

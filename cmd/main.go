@@ -2,14 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"time"
 
 	"github.com/charmbracelet/bubbles/key"
 	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/charmbracelet/log"
+	"github.com/theadambyrne/gofast/internal/logging"
 )
 
 type errMsg error
@@ -69,11 +67,10 @@ func (m model) View() string {
 }
 
 func main() {
-	logger := log.NewWithOptions(os.Stderr, log.Options{
-		ReportCaller:    true,
-		ReportTimestamp: true,
-		TimeFormat:      time.Kitchen,
-	})
+	logger_cfg := logging.LogConfig{Name: "entry", Filepath: "main.log"}
+	logger := logger_cfg.Init()
+
+	logger.Info("Starting the program")
 
 	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {
